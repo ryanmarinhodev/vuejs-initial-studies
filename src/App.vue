@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import HelloWorld from './components/HelloWorld.vue';
+import PostList from './components/post/PostList.vue';
 
 const message = ref('First VueJs contact');
 const count = ref(0);
@@ -17,8 +18,14 @@ const count = ref(0);
   </div>
   <h1>Outra mensagem</h1>
   <div>
-    <button @click="count++">{{ count }}</button>
+    <button @click="count++">Adicionar</button>
+    <h1>{{ count }}</h1>
     <button @click="count = 0">Limpar</button>
+  </div>
+
+  <div>
+    <h1>Listagem de posts:</h1>
+    <PostList />
   </div>
 </template>
 
